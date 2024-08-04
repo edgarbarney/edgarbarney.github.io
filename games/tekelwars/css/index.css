@@ -1,0 +1,154 @@
+body {
+    font-family: 'Press Start 2P';
+}
+
+.flexBreak {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#pageParent {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@keyframes rightAppear {
+    from {transform: translate(100%, 0);}
+    to {transform: translate(0, 0);}
+}
+
+@keyframes leftAppear {
+    from {transform: translate(-100%, 0);}
+    to {transform: translate(0, 0);}
+}
+
+#background1 {
+    background: url(../img/RightEdge.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+
+    animation-name: rightAppear;
+    animation-duration: 1s;
+}
+
+#background2 {
+    background: url(../img/LeftEdge.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+
+    animation-name: leftAppear;
+    animation-duration: 1s;
+}
+
+
+
+.centreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes centreAppear {
+    0% {transform: translate(0, -400%);}
+    75% {transform: translate(0, -400%);}
+    100% {transform: translate(0, 0);}
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    
+    animation-name: centreAppear;
+    animation-duration: 1.5s;
+}
+
+#title {
+    display: flex;
+    font-size: 3vh;
+    color: red;
+    -webkit-text-stroke: 2vh black;
+    paint-order: stroke fill;
+    
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+#topText {
+    position: absolute;
+    display: flex;
+    font-size: 2vh;
+    color: white;
+    -webkit-text-stroke: 0vh black;
+    /*paint-order: stroke fill;*/
+    
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+#buttonContainer {
+    width: 75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mainButtons {
+    margin: 1vh;
+    color: white;
+    font-size: 2vh;
+    background-color: rgb(125, 0, 0);
+    border: none;
+    width: 24vh;
+    height: 6vh;
+    transition: 0.1s;
+}
+
+.mainButtons:hover {
+    background-color: rgb(25, 0, 0);
+}
+
+.mainButtons:active {
+    background-color: rgb(25, 0, 0);
+    border-color: rgb(25, 0, 0);
+    border-style: inset;
+    transition: 0.0s;
+}
+
+@keyframes footerAppear {
+    from {transform: translate(0, 200%);}
+    to {transform: translate(0, 0);}
+}
+
+.footer {
+    position: absolute;
+    top: 90%;
+    transform: translate(0, 200%);
+    animation-name: footerAppear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+    animation-delay: 1s;
+}

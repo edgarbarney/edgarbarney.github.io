@@ -1,0 +1,7 @@
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: rgb(27, 27, 27);
+    font-family: 'Arial', sans-serif;
+    color: rgb(225, 225, 225);
+}
