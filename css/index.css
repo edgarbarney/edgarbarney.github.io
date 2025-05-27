@@ -45,7 +45,6 @@ a.contact-anchor {
     visibility: hidden;
 }
 
-
 .mainpage-window-portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(27ch, 1fr));
