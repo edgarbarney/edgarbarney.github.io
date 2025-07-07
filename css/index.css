@@ -12,6 +12,23 @@
     box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.5);
 }
 
+.mainpage-window a {
+    color: #519EAE;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mainpage-window a:hover {
+    color: #9fc8c3;
+    text-decoration: underline;
+}
+
+.mainpage-window a:active,
+.mainpage-window a:focus {
+    color: #7fa6a0;
+    outline: none;
+}
+
 .mainpage-window-text {
     font-size: clamp(2.2vh, 2.5vw, 3vh);
     margin: auto 0 auto 2vh;
