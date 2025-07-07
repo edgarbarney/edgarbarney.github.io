@@ -47,16 +47,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    will-change: background-color, color, transform;
 }
   
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+
+    transform: scale(1.05);
 }
   
 /* Add a color to the active/current link */
 .topnav-a-active {
     background-color: #00b2d1;
     color: white;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
